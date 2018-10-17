@@ -10,6 +10,10 @@ $ npm i upload-files-to-aws --save
 ### Example
 
  ```
+ import { s3Upload } from 'upload-files-to-aws'
+ 
+ ....
+
  router.post('/file-upload', function * (next) {
         try {
             let file = this
