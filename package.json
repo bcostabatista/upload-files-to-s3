@@ -1,5 +1,5 @@
 {
-  "name": "upload-files-to-s3",
+  "name": "upload-files-to-aws",
   "version": "1.0.0",
   "description": "Easily upload files to S3 buckets",
   "main": "index.js",
