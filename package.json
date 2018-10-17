@@ -1,6 +1,6 @@
 {
   "name": "upload-files-to-aws",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Easily upload files to S3 buckets",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/bcostabatista/upload-files-to-s3.git"
   },
+  "keywords": [
+    "aws",
+    "s3",
+    "upload"
+  ],
   "author": "Bruno Batista <bcostabatista@gmail.com>",
   "license": "ISC",
   "bugs": {
