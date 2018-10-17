@@ -1,7 +1,7 @@
 # Upload files to amazon S3
 A simple module to help developers upload files to S3 buckets
 
-### Instalation
+### Installation
 
 ```
 $ npm i upload-files-to-aws --save
