@@ -83,7 +83,7 @@ exports.s3Upload = function * (
         }
         uploadStatus = yield new Promise(resolve => {
             if(uploadedToMachine) {
-                fs.readFile('/tmp/' + filename, function (err, file) {
+                fs.readFile(`/tmp/${filename}`, function (err, file) {
                     let s3Key = newFilename
                     let params = { Bucket: bucket, Key: s3Key, Body: file, ContentType: mime, ACL: permission }
                     s3.putObject(params, function (err, data) {
