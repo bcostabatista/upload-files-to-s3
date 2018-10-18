@@ -70,12 +70,12 @@ exports.s3Upload = function * (
         while (part = yield parts) {
             mime = part.mime
             let extension = part.mime.split('/')[1]
-            if (extension == 'png' || extension == 'jpg' || extension == 'jpeg' || extension == 'gif') {
+            if (acceptedExtensions.includes(extension)) {
                 filename = part.filename
-                var stream = fs.createWriteStream('/tmp/' + filename)
+                var stream = fs.createWriteStream(`/tmp/${filename}`)
                 part.pipe(stream)
                 var prepareFilename = new Buffer(filename + moment().format('YYYY-MM-DD HH:mm:ss'))
-                newFilename = prepareFilename.toString('base64') + '.' + extension
+                newFilename = `${prepareFilename.toString('base64')}.${extension}`
                 uploadedToMachine = true
             } else {
                 throw new Error('Formato não suportado')
